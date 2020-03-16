@@ -1,5 +1,17 @@
+
+
 <h1>Results page</h1>
 
+<ul></ul>
 <% data["Search"].forEach(function(movie) { %>
-<li> <%= movie["Title"] %> </li>
+<li><%= movie["Title"] %> - <%=movie["Year"] %> <img src="<%= movie["Poster"] %>" /> </li>
 <% }) %>
+</ul>
+<br>
+
+<form action="/" method="GET">
+  <input type="submit" />
+</form>
+
+
+<%- include("partials/footer") %>
